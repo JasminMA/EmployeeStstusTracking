@@ -6,13 +6,16 @@ import com.emp.employee.models.enums.EmployeeStatusEnum;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Date;
 
+@SpringBootTest
 public class EmployeeDtoUnitTest {
 
-
-    private ModelMapper modelMapper = new ModelMapper();
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Test
     public void whenConvertPostEntityToPostDto_thenCorrect() {
